@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   #   resources :products
 
   resources :movies
+  resources :users
   
   # Example resource route with options:
   #   resources :products do
@@ -57,5 +58,4 @@ Rails.application.routes.draw do
   #   end
 end
 
-resources :users
 

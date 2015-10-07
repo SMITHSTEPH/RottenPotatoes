@@ -14,6 +14,6 @@
       - elsif flash[:warning]
         #warning.message= flash[:warning]
         
-      button_to "sign in", new_user_path
+      #button_to "sign in", new_user_path, :method => get, :form_class => "sign_in"
       = yield
       
