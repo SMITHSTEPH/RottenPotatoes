@@ -10,11 +10,12 @@
     %h1.title Rotten Potatoes!
     #main
       
+      = button_to 'Sign in', new_user_path
       - if flash[:notice]
         #notice.message= flash[:notice]
       - elsif flash[:warning]
         #warning.message= flash[:warning]
-        = button_to 'Sign in', new_user_path
+        #= button_to 'Sign in', new_user_path
       = yield
      
       
