@@ -22,7 +22,7 @@ class UsersController < ApplicationController
             flash[:notice] = "Welcome #{@user.title} Your account has been created"
             redirect_to movies_path
 
-        #end
+        end
 
         #add to the User database
     end
