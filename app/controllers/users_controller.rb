@@ -18,8 +18,9 @@ class UsersController < ApplicationController
             @user=CreateUser!({:user_id=>params[:user_id], :email=>params[:email]})
             flash[:notice] = "Welcome #{@user.title} Your account has been created"
             redirect_to movies_path
-=end
+
         end
+=end
         #add to the User database
     end
 end
