@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
     def create
         #user_id=params[:user_id]
-        redirect_to movie_path
+        redirect_to new
 =begin
         if User.find(user_id).blank?
             flash[:notice] = "Sorry. This user-id is taken. Try again"
