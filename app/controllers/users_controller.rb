@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     end
 
     def create
-        user_id=params[:user_id]
+        #user_id=params[:user_id]
         redirect_to movie_path
 =begin
         if User.find(user_id).blank?
