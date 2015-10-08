@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     def create
         user_id=params[:user_id]
         puts "User"
-        puts user_id.ToString;
+        puts user_id;
         puts params[:email]
         puts "IN USER CREATE"
 
