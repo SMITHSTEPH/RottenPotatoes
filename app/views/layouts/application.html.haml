@@ -16,7 +16,7 @@
       - elsif flash[:warning]
         #warning.message= flash[:warning]
       = yield
-      = button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
+      = button_to 'Sign Up', new_user_path, :method => GET, :confirm => 'Are you sure?'
        
      
       
