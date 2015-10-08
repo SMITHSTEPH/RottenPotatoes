@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     def create
         user_id=params[:user_id]
         redirect_to new
+        puts "IN USER CREATE"
 =begin
         if User.find(user_id).blank?
             flash[:notice] = "Sorry. This user-id is taken. Try again"
