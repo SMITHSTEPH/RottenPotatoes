@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-    def movie_params
+    def user_params
         params.require(:user).permit(:user_id, :email,)
     end
     def new
@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
     def create
         user_id=params[:user_id]
+        redirect_to movie_path
 =begin
         if User.find(user_id).blank?
             flash[:notice] = "Sorry. This user-id is taken. Try again"
