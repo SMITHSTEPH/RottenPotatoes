@@ -1,6 +1,6 @@
 %h1 Sign-up
 
-
+= button_to 'Sign Up/Login', login_path, method: :get
 = form_tag login_path do
 
   = label :user, :user_id, 'User-ID'

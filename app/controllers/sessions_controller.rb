@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-    layout false  #overriding application layout
+    #layout false  #overriding application layout
     def new
     end
     
