@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     end
     
     def create
-       
+       redirect_to movies_path
     end
 
 end
