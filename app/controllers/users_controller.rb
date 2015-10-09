@@ -9,14 +9,8 @@ class UsersController < ApplicationController
     end
 
     def create
-        #user_id=params[:user_id]
-        puts "User"
-        puts params.to_s;
-        puts "email: " + user_params[:email].to_s
-        puts "IN USER CREATE"
-        redirect_to movies_path
-        
-=begin
+        user_id=user_params[:user_id]
+
         if User.find(user_id).blank?
             puts "IN CREATE USER IF"
             flash[:notice] = "Sorry. This user-id is taken. Try again"
@@ -24,13 +18,11 @@ class UsersController < ApplicationController
         else
             puts "IN CREATE USER ELSE"
             #in database
-            @user=CreateUser!({:user_id=>params[:user_id], :email=>params[:email]})
+            @user=CreateUser!(params[:user])
             flash[:notice] = "Welcome #{@user.title} Your account has been created"
             redirect_to movies_path
 
         end
-=end
-
         #add to the User database
     end
 end
