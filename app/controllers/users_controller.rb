@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     def create
         user_id=user_params[:user_id]
 
-        if User.find(user_id).blank?
+        if User.find_by_user_id(user_id).blank?
             puts "IN CREATE USER IF"
             flash[:notice] = "Sorry. This user-id is taken. Try again"
             redirect_to new
