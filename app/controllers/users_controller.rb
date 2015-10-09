@@ -1,17 +1,18 @@
 class UsersController < ApplicationController
-
+=begin
     def user_params
         params.require(:user).permit(:user_id, :email)
     end
+=end
     def new
     # default: render 'new' template
     end
 
     def create
-        user_id=params[:user_id]
+        #user_id=params[:user_id]
         puts "User"
-        puts user_id;
-        puts params[:email]
+        puts params.ToString;
+        #puts params[:email]
         puts "IN USER CREATE"
 =begin
         if User.find(user_id).blank?
