@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     def create
         user_id=user_params[:user_id]
         if User.find_by_user_id(user_id).blank?
+            puts "In Create user if"
             @user=User.CreateUser!({:user_id=>user_params[:user_id], :email=>user_params[:email]})
             flash[:notice] = "Welcome #{@user.user_id} Your account has been created"
             redirect_to new_login_path
