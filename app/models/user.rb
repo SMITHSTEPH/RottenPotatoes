@@ -2,7 +2,9 @@ class User < ActiveRecord::Base
     
     def self.CreateUser! user
         user[:session_token]=SecureRandom.base64
-        self.create user
+        puts "in CreateUser!"
+        puts user.to_s
+        create user
     end
     
     def self.Test 
