@@ -14,7 +14,7 @@ class UsersController < ApplicationController
         if User.find_by_user_id(user_id).blank?
             puts "IN CREATE USER IF"
             flash[:notice] = "Sorry. This user-id is taken. Try again"
-            redirect_to new_users_path
+            redirect_to new_user_path
         else
             puts "IN CREATE USER ELSE"
             #in database
