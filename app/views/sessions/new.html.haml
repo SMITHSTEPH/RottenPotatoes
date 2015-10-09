@@ -9,6 +9,13 @@
   %body
     %h1.title Rotten Potatoes!
     = button_to 'Sign Up/Login', new_user_path, method: :get
+    
+    - if flash[:notice]
+    #notice.message= flash[:notice]
+    - elsif flash[:warning]
+    #warning.message= flash[:warning]
+    = yield
+      
     %h1 Login
     = form_tag login_path do
 
@@ -19,3 +26,5 @@
       = text_field :user, 'email'
 
       = submit_tag 'Login to my account'
+      
+      
