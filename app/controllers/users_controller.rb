@@ -12,7 +12,7 @@ class UsersController < ApplicationController
         #user_id=params[:user_id]
         puts "User"
         puts params.to_s;
-        puts params[:email]
+        puts "email: " + params[:email].to_s
         puts "IN USER CREATE"
         redirect_to movies_path
         
