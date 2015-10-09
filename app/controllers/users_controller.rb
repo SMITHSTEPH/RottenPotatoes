@@ -15,7 +15,7 @@ class UsersController < ApplicationController
             #in database
             #User.Test
             @user=User.CreateUser!({:user_id=>user_params[:user_id], :email=>user_params[:email]})
-            flash[:notice] = "Welcome #{@user.title} Your account has been created"
+            #flash[:notice] = "Welcome #{@user.title} Your account has been created"
             redirect_to movies_path
         else
             flash[:notice] = "Sorry. This user-id is taken. Try again"
