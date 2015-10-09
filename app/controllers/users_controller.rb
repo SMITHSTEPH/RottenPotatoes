@@ -13,7 +13,7 @@ class UsersController < ApplicationController
         if User.find_by_user_id(user_id).blank?
             puts "IN CREATE USER IF"
             #in database
-            @user=User.CreateUser!(params[:user])
+            @user=User.CreateUser!({:user_id=>user_params[:user_id], :email=>user_params[:email]})
             flash[:notice] = "Welcome #{@user.title} Your account has been created"
             redirect_to movies_path
         else
