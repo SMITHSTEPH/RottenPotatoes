@@ -13,7 +13,7 @@ class UsersController < ApplicationController
         puts user_id;
         puts params[:email]
         puts "IN USER CREATE"
-
+=begin
         if User.find(user_id).blank?
             puts "IN CREATE USER IF"
             flash[:notice] = "Sorry. This user-id is taken. Try again"
@@ -26,6 +26,7 @@ class UsersController < ApplicationController
             redirect_to movies_path
 
         end
+=end
 
         #add to the User database
     end
