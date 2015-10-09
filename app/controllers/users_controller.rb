@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     def create
         #user_id=params[:user_id]
         puts "User"
-        puts params.ToString;
+        puts params.to_s;
         #puts params[:email]
         puts "IN USER CREATE"
         redirect_to movies_path
