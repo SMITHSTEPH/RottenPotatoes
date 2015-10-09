@@ -7,8 +7,9 @@
     = csrf_meta_tags
 
   %body
+    %h1.title Rotten Potatoes!
     = button_to 'Sign Up/Login', login_path, method: :get
-    %h1 Sign-up
+    %h2 Sign-up
     = form_tag login_path do
 
       = label :user, :user_id, 'User-ID'
