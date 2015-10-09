@@ -1,8 +1,8 @@
 class SessionsController < ApplicationController
-    #layout false  #overriding application layout
+    layout false  #overriding application layout
     
     def new
-        render body new
+       
     end
     
     def destroy
