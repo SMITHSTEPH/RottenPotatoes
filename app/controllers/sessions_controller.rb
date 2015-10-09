@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
     end
     
     def destroy
+        puts "in destroy"
         reset_session
         redirect_to movies_path
     end
