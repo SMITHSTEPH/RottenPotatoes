@@ -14,6 +14,8 @@ class UsersController < ApplicationController
         puts params.ToString;
         #puts params[:email]
         puts "IN USER CREATE"
+        redirect_to movies_path
+        
 =begin
         if User.find(user_id).blank?
             puts "IN CREATE USER IF"
