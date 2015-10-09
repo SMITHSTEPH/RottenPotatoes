@@ -15,7 +15,8 @@ class SessionsController < ApplicationController
     end
     
     def create
-        user_id=user_params[:signup_id]
+        user_id=user_params[:login_id]
+        puts "user_id is" + user_id
         if User.find_by_user_id(user_id).blank?
             flash[:notice]="incorrect username"
             redirect_to login_path
