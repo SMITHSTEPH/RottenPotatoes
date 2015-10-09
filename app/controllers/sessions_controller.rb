@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
             flash[:notice]="incorrect username"
             redirect_to login_path
         else
-            session[:session_token]=@user.session_token
+            session[:session_token]=@current_user.session_token
             redirect_to movies_path
         end
     end
