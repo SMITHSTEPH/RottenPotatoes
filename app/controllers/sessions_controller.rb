@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
+    layout "new" #overriding application layout
     def new
-        layout "new" #overriding application layout
     end
     
     def destroy
