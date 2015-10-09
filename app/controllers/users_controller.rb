@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
     def user_params
-        params.require(:user).permit(:user_id, :email)
+        params.require(:user).permit(:signup_id, :signup_email)
     end
 
     def new
@@ -9,12 +9,12 @@ class UsersController < ApplicationController
     end
 
     def create
-        user_id=user_params[:user_id]
+        user_id=user_params[:signup_id]
         puts "In Create"
         if User.find_by_user_id(user_id).blank?
             puts "In Create user if"
-            @user=User.CreateUser!({:user_id=>user_params[:user_id], :email=>user_params[:email]})
-            flash[:notice] = "Welcome #{@user.user_id} Your account has been created"
+            @user=User.CreateUser!({:signup_id=>user_params[:signup_id], :signup_email=>user_params[:signup_email]})
+            flash[:notice] = "Welcome #{@user.signup_id} Your account has been created"
             redirect_to login_path
         else
             flash[:notice] = "Sorry. This user-id is taken. Try again"
