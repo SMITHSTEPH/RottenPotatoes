@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
     layout false  #overriding application layout
 
     def user_params
-        params.require(:user).permit(:login_id, :login_email, :session_token)
+        params.require(:user).permit(:login_id, :login_email)
     end
     
     
@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
             flash[:notice]="incorrect username"
             redirect_to login_path
         else
-            session[:session_token]=user.session_token
+            session[:session_token]=:user[autheniticity_token]
             redirect_to movies_path
         end
     end
