@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-=begin
+
     def user_params
         params.require(:user).permit(:user_id, :email)
     end
-=end
+
     def new
     # default: render 'new' template
     end
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
         #user_id=params[:user_id]
         puts "User"
         puts params.to_s;
-        #puts params[:email]
+        puts params[:email]
         puts "IN USER CREATE"
         redirect_to movies_path
         
