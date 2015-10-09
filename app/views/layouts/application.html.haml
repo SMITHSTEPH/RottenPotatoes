@@ -12,7 +12,7 @@
     -if !@current_user
       = button_to 'Sign Up/Login', login_path, method: :get, id=>'login'
     -else
-      session[:notice] = "You are logged in as #{@current_user.user_id}"
+      session[:notice] = "You are logged in"
       = button_to 'Logout', logout_path, method: :get, id=>'logout'
     #main
        
