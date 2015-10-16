@@ -8,7 +8,7 @@
 
   %body
     %h1.title Rotten Potatoes!
-    = button_to 'Sign Up', new_user_path, method: :get
+    = button_to 'Sign Up', new_user_path, method: :get, :id=>'signup'
     %h1 Login
     = form_tag login_path do
 
@@ -16,7 +16,7 @@
       = text_field :user, 'login_id', :id=>'login_id'
 
       = label :user, :login_email, 'Email'
-      = text_field :user, 'login_email'
+      = text_field :user, 'login_email', :id=>'login_email'
 
       = submit_tag 'Login to my account', :id=> 'login_submit'
       - if flash[:notice]
