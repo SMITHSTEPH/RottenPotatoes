@@ -13,7 +13,7 @@
     = form_tag login_path do
 
       = label :user, :login_id, 'User-ID'
-      = text_field :user, 'login_id'
+      = text_field :user, 'login_id', :id=>'login_id'
 
       = label :user, :login_email, 'Email'
       = text_field :user, 'login_email'

@@ -12,7 +12,7 @@ class UsersController < ApplicationController
         user_id=user_params[:signup_id]
         if User.find_by_user_id(user_id).blank?
             @user=User.CreateUser!({:user_id=>user_params[:signup_id], :email=>user_params[:signup_email]})
-            flash[:notice] = "Welcome #{@user.user_id} Your account has been created"
+            flash[:notice] = "Welcome   Your account has been created"
             redirect_to login_path
         else
             flash[:notice] = "Sorry. This user-id is taken. Try again"
